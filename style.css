@@ -1,0 +1,43 @@
+body{
+    text-align: center;
+}
+
+#container{
+    width: 80%;
+    margin:0 auto;
+}
+
+button{
+    padding: 5px;
+    border: 2px solid black;
+    font-weight: 700;
+    color: white;
+}
+
+
+.submit {
+    width: 150px; ;
+    margin:20px 0 0 50px ;
+    background-color: blue; 
+}
+
+li{
+    padding: 10px 0;
+    list-style: none;
+}
+
+.submit:active{
+    background-color: navy;
+   
+}
+
+.delBtn{
+    background-color: red;
+    transform: translateX(20px);
+    
+}
+
+.doneBtn-2{
+    background-color: green;
+    transform: translateX(40px);
+}
