@@ -4,25 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Events</title>
+    <title>TODO App</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>TODO List</h1>
+    <div class="title-container">
+        <h1 class="title">TODO List</h1>
+    </div>
     <section id="container">
-        <form action="/shelter">
-            <label for="userInput">Task: </label>
-                <input type="text" name="task" id="userInput">
+       <div class="Inner-container">
+        <form action="/shelter" id="form_container">
+            <input type="text" name="task" id="userInput" placeholder="Add task" class="input">
             <div>
-                <button type="submit" class="submit">Add</button>
+                <button type="submit" class="submit"><img src="/img/icons8-plus-30 -white.png" alt="" class="add-task-btn-img"></button>
             </div>
         </form>
-        <h2>Tasks List</h2>
-        <ul class="task">
+            <div class="task-section">
+                <h2 class="task-heading">Tasks to do - <span id="numoftask">0</span></h2>
+                <ul class="task-list-container">
 
-        </ul>
+                </ul>
+                <div class="done-section">
+                    <h3 class="finished-tasks ">Completed - <span id="num-of-fin-task">0</span></h3>
+                    <ul id="Acc-task-cont">
 
+                    </ul>
+                </div>
+                <div class="reset-section"">
+                    <button id="resetBtn" class="r-btn">RESET</button>
+                </div>
+            </div>
+       </div>
     </section>
 
 
