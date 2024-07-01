@@ -40,6 +40,7 @@ body {
     background-color: var(--page-color);
     color: var(--text-color);
     font-family: monospace;
+
 }
 ol, ul {
 	list-style: none;
@@ -75,7 +76,7 @@ table {
     cursor: pointer;
     padding: .2em;
     /* border: 2px solid red; */
-    z-index: 0;
+    /* z-index: 0; */
 }
 
 .input::placeholder {
@@ -106,18 +107,19 @@ table {
     font-weight: 800;
 }
 #container{
-    width: 40%;
-    max-width: 50%;
+    width: 85%;
     margin: 0 auto;
     background-color: var(--primary-color);
     border-radius: 10px;
-    padding: 2em 3em;
+    padding: .5em 1em;
     font-weight: 700;
     font-size: 1rem;
+    /* background-color: red; */
 }
 
 .Inner-container{
-    /* border: 1px solid red; */
+    /* border: 1px solid white; */
+    width: 100%;
 }
 
 #form_container{
@@ -126,12 +128,10 @@ table {
     justify-content: space-between;
     padding: 1em 0;
     margin-bottom: 1.5em;
-
+    width: 100%;
+    /* border: 2px solid yellow; */
 }
 
-span{
-    z-index: 1;
-}
 
 .input,button{
     padding: 8px;
@@ -141,7 +141,7 @@ span{
 
 
 input{
-    flex-basis: 85%;
+    width:75%; 
     background-color: var(--primary-color);
     border: none;
     outline: 3px solid var(--secondary-color);
@@ -149,9 +149,9 @@ input{
 }
 
 button{
-     width: 50px;
+    width: 50px;
     background-color: var(--secondary-color);
-
+    border: none;
 }
 
 .task-heading, 
@@ -168,6 +168,10 @@ finished-tasks{
   color: var(--secondary-color);
 }
 
+p{
+    text-align: justify;
+}
+
 .done{
     text-decoration: line-through;
     color: var(--done-task-color);
@@ -181,7 +185,7 @@ finished-tasks{
 
 .r-btn {
     padding: 1.1em;
-    width: 20%;
+    width: 30%;
     font-weight: 800;
     color:var(--text-color);
     display:none;
@@ -191,4 +195,33 @@ finished-tasks{
  display: unset;
 }
 
+button:hover{
+ 
+    cursor: pointer;
+}
 
+button:active{
+    background-color: darkmagenta;
+}
+
+
+
+@media only screen and (min-width: 480px ) {
+
+    #container{
+        width: 550px;
+        max-width: 50%;
+
+    }
+
+
+    input{
+        flex-basis:85%; 
+    }
+
+    .r-btn {
+
+        width: 20%;
+    }
+    
+}

@@ -14,7 +14,9 @@ let numOfFinishedTask = 0;
 // event listener for form submission
 form.addEventListener('submit',(e)=>{
    e.preventDefault();
-   numOfTasks += 1;
+   if(userInput.value !== ""){
+    numOfTasks += 1;
+   }
    numOfTasksDisplay.textContent = numOfTasks;
    const formData = userInput.value;
   
@@ -25,6 +27,7 @@ form.addEventListener('submit',(e)=>{
     const taskItem = document.createElement("li");
    taskItem.classList.add("flex","li-style");
    const taskDiv = document.createElement('div');
+   taskDiv.style.flex = "1"
    const taskParagarph = document.createElement('p')
    taskParagarph.textContent = formData;
    taskDiv.append(taskParagarph);
@@ -50,8 +53,6 @@ form.addEventListener('submit',(e)=>{
 
 
    ctrlDiv.append(doneSpan,deleteSpan);
-
-
    taskItem.append(taskDiv,ctrlDiv);
    taskContainer.append(taskItem);
    userInput.value = ""
@@ -92,9 +93,13 @@ taskContainer.addEventListener('click',(e)=>{
   }
 })
 
+
+//event listeners for reseting the app
 resetButton.addEventListener('click',()=>{
   reset();
 })
+
+// function that resets all the input in the app to its default state 
 
 function reset(){
   numOfTasks = 0;
