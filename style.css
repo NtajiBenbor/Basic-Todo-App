@@ -166,10 +166,12 @@ finished-tasks{
   background-color: var(--task-bg-color);
   border-radius: 10px;
   color: var(--secondary-color);
+
 }
 
 p{
-    text-align: justify;
+    /* text-align: justify; */
+    font-size: 1rem;
 }
 
 .done{
@@ -222,6 +224,11 @@ button:active{
     .r-btn {
 
         width: 20%;
+    }
+
+    p{
+        /* text-align: justify; */
+        font-size: 100%;
     }
     
 }
